@@ -12,15 +12,15 @@ const FIELDRULLS = [
         label: '姓名'
     },
     {
-        require: true,
+        require: false,
         name: 'age',
-        rex: /\d{2,}/,
+        rex: /^\d{2,}$/,
         err: '年龄必须是两位以上数字'
     },
 ]
 new Vue({
     el: '#app',
-    // template: tpl,
+    template: tpl,
     data:  function() {
         return {
             formData: {
@@ -33,7 +33,8 @@ new Vue({
     },
     methods: {
         save: function() {
-            this.invalids = Valid.check(FIELDRULLS, this.formData, this.$refs);
+            // this.invalids = Valid.check(FIELDRULLS, this.formData, this.$refs);
+            console.log(Valid.check(FIELDRULLS, this.formData, this.$refs))
         },
     }
 });
