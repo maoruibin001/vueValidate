@@ -23,7 +23,8 @@
     "css-loader": "^0.28.4",
     "html-webpack-plugin": "^2.30.0",
     "webpack-dev-server": "^2.6.1",
-    "string-loader": "^0.0.1"
+    "string-loader": "^0.0.1",
+    "webpack": "^3.4.1"
   },
   "author": "",
   "license": "ISC",
